@@ -1,15 +1,17 @@
-// This is a "stub" file.  It's a little start on your solution.
-// It's not a complete solution though; you have to write some code.
-
-// Package twofer should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
+// Package twofer
+//
+// it provides a func ShareWith which gives a message based on the name or no name
+// it can be used for
 package twofer
 
-// ShareWith should have a comment documenting it.
+import "fmt"
+
+// ShareWith is function takes the name of the person to share with
+// and returns you sentence with the person name, or if no name it returns generic message.
 func ShareWith(name string) string {
-	// Write some code here to pass the test suite.
-	// Then remove all the stock comments.
-	// They're here to help you get started but they only clutter a finished solution.
-	// If you leave them in, reviewers may protest!
-	return ""
+	person := "you"
+	if name != "" {
+		person = name
+	}
+	return fmt.Sprintf("One for %s, one for me.", person)
 }
