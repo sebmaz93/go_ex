@@ -5,7 +5,7 @@ func Factors(n int64) []int64 {
 	num := n
 
 	if n == 1 {
-		return []int64{1}
+		return []int64{}
 	}
 
 	divisor := int64(2)
